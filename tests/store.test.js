@@ -1,4 +1,4 @@
-const Store = require('../src/lib/Store')
+const { Store } = require('../index.js')
 
 const counter = (state = 0, action) => {
   switch (action.type) {

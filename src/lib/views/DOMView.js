@@ -1,4 +1,4 @@
-module.exports = class View {
+module.exports = class DOMView {
   constructor (el, store) {
     this._el = el
     this._store = store
