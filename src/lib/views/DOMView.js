@@ -9,9 +9,8 @@ module.exports = class DOMView {
   }
 
   _prepareRender (state) {
-    const tpl = this.render(state)
-    if (tpl === false) { return }
-    this._el.innerHTML = tpl
+    if (this.shouldUpdate && !this.shouldUpdate(state)) { return }
+    this._el.innerHTML = this.render(state)
   }
 
   render() {
